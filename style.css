@@ -1,6 +1,10 @@
 .wrapper{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* Cara lebih baik menggunakan function repeat() */
+    /* grid-template-columns : repeat(6, 1fr); */
+    /* Bisa digunakan juga untuk nilai yang beragam */
+    grid-template-columns: repeat(3, 1fr 3fr);
 }
 
 
