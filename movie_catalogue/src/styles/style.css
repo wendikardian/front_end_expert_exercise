@@ -4,14 +4,17 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* App Bar */
+
+/*
+  AppBar
+*/
 
 .app-bar {
   padding: 8px 16px;
@@ -38,6 +41,11 @@ body {
   cursor: pointer;
 }
 
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+
 .app-bar .app-bar__brand h1 {
   color: #db0000;
   text-transform: uppercase;
@@ -56,6 +64,10 @@ body {
   overflow: hidden;
 }
 
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+
 .app-bar .app-bar__navigation ul li a {
   display: inline-block;
   text-decoration: none;
@@ -65,7 +77,9 @@ body {
   width: 100%;
 }
 
-/* Main content */
+/*
+  Main Content
+*/
 
 main {
   padding: 32px;
@@ -81,7 +95,10 @@ main {
   font-weight: normal;
 }
 
-/* Movies */
+
+/*
+  Movies
+*/
 
 .movies {
   display: grid;
@@ -90,7 +107,10 @@ main {
   margin: 32px 0;
 }
 
-/* Movie item */
+
+/*
+  Movie Item
+*/
 
 .movie-item {
   width: 100%;
@@ -117,10 +137,7 @@ main {
   color: white;
 }
 
-.movie-item
-  .movie-item__header
-  .movie-item__header__rating
-  .movie-item__header__rating__score {
+.movie-item .movie-item__header .movie-item__header__rating .movie-item__header__rating__score {
   margin-left: 10px;
 }
 
@@ -145,7 +162,10 @@ main {
   -webkit-box-orient: vertical;
 }
 
-/* Movie */
+
+/*
+  Movie
+*/
 
 .movie {
   margin: 0 auto;
@@ -165,7 +185,11 @@ main {
   margin: 8px 0;
 }
 
-/* Footer */
+
+
+/*
+  Footer
+*/
 
 footer {
   padding: 16px;
