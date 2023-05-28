@@ -1,14 +1,18 @@
+/* eslint-disable quotes */
+import * as WorkboxWindow from "workbox-window";
+
 const swRegister = async () => {
-  if (!('serviceWorker' in navigator)) {
-    console.log('Service worker is not supported by browser');
+  if (!("serviceWorker" in navigator)) {
+    console.log("Service Worker not supported in the browser");
     return;
   }
 
+  const wb = new WorkboxWindow.Workbox("/service-worker.js");
   try {
-    await navigator.serviceWorker.register('./sw.bundle.js');
-    console.log('Service worker registered');
+    await wb.register();
+    console.log("Service Worker Registered");
   } catch (error) {
-    console.log('Failed to register service worker', error);
+    console.log("Failed to register Service Worker", error);
   }
 };
 
