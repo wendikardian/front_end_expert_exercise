@@ -1,5 +1,5 @@
 import '../styles/main.css';
-import _ from 'lodash';
+import filter from 'lodash.filter';
 import contacts from './contacts';
 
 const inputContactForm = document.querySelector('#inputContactForm');
@@ -20,7 +20,7 @@ inputContactForm.addEventListener('submit', (event) => {
     number: inputNumber.value,
     type: inputType.value,
   };
-  
+
   contacts.push(contact);
 });
 
@@ -28,8 +28,8 @@ showContactForm.addEventListener('submit', (event) => {
   event.preventDefault();
   contactContainer.innerHTML = '';
 
-  _.filter(contacts, contactType.value === 'all' ? {} : { type: contactType.value })
-    .forEach(renderContact);
+  filter(contacts, contactType.value === 'all' ? {} : { type: contactType.value })
+  .forEach(renderContact);
 });
 
 const renderContact = (contact) => {
